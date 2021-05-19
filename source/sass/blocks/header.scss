@@ -1,33 +1,43 @@
 .header {
-  display: flex;
-  align-items: center;
-  min-height: 100px;
-  padding: 0 40px;
-
-  background-color: $color-blue;
-
   &__wrapper {
+    width: 100%;
+    background-color: $bg-main;
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__user-nav {
+    margin-left: auto;
+  }
+
+  &__user-btn {
+    padding: 10px 33px;
     display: flex;
     align-items: center;
-  }
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $color-default-white;
+    background-color: $bg-btn;
+    border: none;
+    transition: background-color $transition;
 
-  a,
-  p {
-    color: $color-white;
-  }
-
-  ul {
-    display: flex;
-    margin: 0;
-    margin-right: 20px;
-    margin-left: 60px;
-    padding: 0;
-
-    list-style: none;
-
-    li {
-      margin-right: 20px;
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        background-color: $bg-btn-active;
+      }
     }
+
+    &:active {
+      background-color: $bg-btn-active;
+    }
+
+
   }
 
   .main-nav__toggle {

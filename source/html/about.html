@@ -3,7 +3,7 @@
 <head>
 
   @@include("source/html/base/head.html")
-  <title>ProjectName — Главная</title>
+  <title>Тест — О компании</title>
 
 </head>
 <body>
@@ -14,12 +14,14 @@
 
   <div class="wrapper">
     @@include("source/html/base/header.html", {
-      "main": true
+      "headerActiveLinkIndex": 1
     })
 
     <main>
+      
       <div class="container">
-        <h1>Главная</h1>
+        <p><a href="#" data-modal="feedback">modal--feedback link</a></p>
+        <p><a href="#" data-modal="success">modal--success link</a></p>
       </div>
     </main>
 

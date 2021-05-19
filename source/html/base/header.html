@@ -1,28 +1,95 @@
 <header class="header @@if (context.mod) { header--@@mod }">
-  <div class="header__wrapper">
-    <a class="header__logo" @@if (!context.main) { href="main.html"} aria-label="Переход на главную">
-      Логотип
+  <div class="header__wrapper ">
+
+    <div class="header__nav container">
+      <nav class="main-nav">
+        <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
+          <svg width="20" height="20">
+            <use xlink:href="#icon-burger"></use>
+          </svg>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 0) { href="#" }>Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 1) { href="about.html" }>О компании</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 2) { href="#" }>Ссылка 1</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link @@if (context.headerActiveLinkIndex === 3) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 3) { href="#" }>Ссылка 2</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link @@if (context.headerActiveLinkIndex === 4) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 4) { href="#" }>Ссылка 3</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="header__user-nav">
+        <button class="btn header__user-btn" type="button">
+          <img src="img/content/icon-user.png" width="16" height="15" alt="Войти">
+          <span>Вход</span>
+        </button>
+      </div>
+  </div>
+
+  </div>
+  <div class="hero container">
+    <a class="hero__logo" href="main.html" aria-label="Переход на главную">
+      <img src="img/content/logo.png" srcset="img/content/logo@2x.png 2x" width="195" height="37" alt="Лого тест">
     </a>
 
-    <nav class="main-nav">
-      <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
-        <svg width="20" height="20">
-          <use xlink:href="#icon-burger"></use>
-        </svg>
+    <div class="hero__call">
+      <ul class="hero__list">
+        <li class="hero__item">
+          <a class="hero__link" href="tel:+3809817000740">+380 98 170 00 740</a>
+        </li>
+        <li class="hero__item">
+          <a class="hero__link" href="tel:+3809817000740">+380 98 170 00 740</a>
+        </li>
+      </ul>
+      <button class="btn hero__call-btn" type="button">
+        <img src="img/content/icon-phone.png" width="12" height="17" alt="Позвонить">
+        <span>Перезвонить мне</span>
       </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 0) { href="#" }>Страница 1</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 1) { href="#" }>Страница 2</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 2) { href="#" }>Страница 3</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    </div>
+    <ul class="hero__product-menu">
+      <li class="hero__product-item">
+        <a class="hero__product-link" href="#">
+          <img src="img/content/compare.png" srcset="./img/content/compare@2x.png 2x" width="45" height="34" alt="Сравнить">
+
+        </a>
+        <span class="hero__name">Сравнение</span>
+        <div class="hero__digit">
+
+        </div>
+      </li>
+      <li class="hero__product-item">
+        <a class="hero__product-link" href="#">
+          <img src="img/content/favorite.png" srcset="./img/content/favorite@2x.png 2x" width="34" height="33" alt="Избранное">
+
+        </a>
+        <span class="hero__name">Избранное</span>
+        <div class="hero__digit">
+
+        </div>
+      </li>
+      <li class="hero__product-item">
+        <a class="hero__product-link" href="#">
+          <img src="img/content/basket.png" srcset="./img/content/basket@2x.png 2x" width="40" height="35" alt="Корзина">
+
+
+        </a>
+        <span class="hero__name">Корзина</span>
+        <div class="hero__digit show">
+
+          <span>5</span>
+        </div>
+      </li>
+    </ul>
+
   </div>
 </header>
