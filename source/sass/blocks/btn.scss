@@ -1,0 +1,46 @@
+.btn {
+  position: relative;
+
+  display: inline-flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+  padding: 10px 33px;
+
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $color-default-white;
+  text-align: center;
+  text-decoration: none;
+
+  background: $bg-btn;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+
+  transition: color $transition, transform $transition, background-color $transition;
+
+  user-select: none;
+
+  appearance: none;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      background-color: $bg-btn-active;
+    }
+  }
+
+  img,
+  svg {
+    margin-right: 10px;
+  }
+}

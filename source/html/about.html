@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include("source/html/base/head.html")
+  <title>Тест — О компании</title>
+
+</head>
+<body>
+
+  <div style="display: none;">
+    @@include("build/img/sprite_auto.svg")
+  </div>
+
+  <div class="wrapper">
+    @@include("source/html/base/header.html", {
+      "headerActiveLinkIndex": 1
+    })
+
+    <main>
+
+      <section class="catalog container">
+        <div class="catalog__menu">
+          <div class="catalog__menu-wrap">
+            <button class="catalog__menu-btn" type="button">
+              <span class="catalog__burger-line"></span>
+            </button>
+            <div class="catalog__menu-title">Меню</div>
+          </div>
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">
+                Ссылка 1
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">
+                Ссылка 2
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">
+                Ссылка 3
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">
+                Ссылка 4
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">
+                Ссылка 5
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">
+                Ссылка 6
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">
+                Ссылка 7
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="catalog__search">
+          <form>
+            <div class="custom-input catalog__search-input">
+              <label class="custom-input__label" for="main-search"></label>
+              <input type="search" placeholder="Поиск" name="main-search" id="main-search">
+            </div>
+
+          </form>
+        </div>
+        <div class="catalog__filter"></div>
+
+
+      </section>
+    </main>
+
+    @@include("source/html/base/footer.html")
+
+    @@include("source/html/base/modal.html", {
+      "name": "feedback"
+    })
+
+    @@include("source/html/base/modal.html", {
+      "name": "success",
+      "fitContent": true,
+      "noScale": true,
+      "mod": "some-mod"
+    })
+  </div>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+.hero {
+  padding: 25px 0;
+  display: flex;
+  align-items: center;
+
+
+  &__call {
+    margin: 4px auto 0;
+    padding-left: 55px;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &__call-btn {
+    img {
+      margin-right: 5px;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0 17px 0 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: $bg-block;
+  }
+
+  &__item {
+    padding: 12px 12px 13px;
+    margin-right: 16px;
+  }
+
+  &__link {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 19px;
+    transition: opacity $transition;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__product-menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+  &__product-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid $color-gray-light;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  &__product-link {
+    padding: 10px 20px;
+    width: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity $transition;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__digit {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    width: 20px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13px;
+    color: $color-default-white;
+    background-color: $bg-btn;
+
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity $transition, visibility $transition;
+    box-shadow: 0px 6px 5.656px rgba(247, 129, 0, 0.7);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 5px;
+      height: 6px;
+      border: 4px solid transparent;
+      border-top: 5px solid #ff8900;
+      transform: translateX(-50%);
+
+    }
+
+    &.show {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__name {
+    margin-top: -1px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    color: $color-text;
+    text-transform: uppercase;
+
+  }
+}
