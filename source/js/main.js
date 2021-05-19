@@ -2,6 +2,7 @@ import {ieFix} from './utils/ie-fix';
 import {iosVhFix} from './utils/ios-vh-fix';
 
 import {initModals} from './modules/init-modals';
+import {initInputSelect} from './modules/init-custom-select';
 
 // Utils
 // ---------------------------------
@@ -13,3 +14,4 @@ iosVhFix();
 // ---------------------------------
 
 initModals();
+initInputSelect();

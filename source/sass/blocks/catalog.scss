@@ -13,6 +13,12 @@
 
   &__search {
     grid-area: search;
+
+    form {
+      position: relative;
+      display: flex;
+      flex-wrap: nowrap;
+    }
   }
 
   &__filter {
@@ -100,10 +106,6 @@
 
   &__item {
     width: 100%;
-
-    &:last-child .catalog__link {
-      border-bottom: none;
-    }
   }
 
   &__link {
@@ -141,6 +143,44 @@
         transform: translateX(5px);
       }
     }
+  }
 
+  &__search-input {
+    width: calc(100% - 166px);
+
+
+    input {
+      height: 56px;
+      background-color: $bg-search;
+    }
+  }
+
+  &__select {
+    position: absolute;
+    right: 166px;
+    top: 0;
+    width: 149px;
+  }
+
+  &__select-wrap {
+    position: relative;
+    input {
+      padding-top: 6px;
+
+
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      width: 1px;
+      background-color: $color-search-line;
+    }
+  }
+
+  &__search-btn {
+    height: 56px;
   }
 }

@@ -1,0 +1,302 @@
+.custom-input {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+
+  @include viewport--sm {
+    margin-bottom: 16px;
+  }
+
+  input,
+  textarea {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 56px;
+    padding: 0 25px;
+
+    font-family: $font-family--main;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 40px;
+
+    color: $color-input-text;
+
+    background-color: $color-default-white;
+
+    border: none;
+    outline: none;
+    // transition: color $transition, border $transition, background-color $transition;
+    caret-color: transparent;
+
+
+    @include viewport--sm {
+      padding: 26px 15px 4px;
+
+      min-height: 56px;
+    }
+
+    &:hover {
+      color: $color-default-black;
+      caret-color: $color-default-black;
+
+      &::placeholder {
+        color: $color-default-black;
+      }
+    }
+
+    .error & {
+      border: 1px solid red;
+    }
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active  {
+      -webkit-box-shadow: 0 0 0 50px $bg-search inset !important;
+  }
+
+  &.error input {
+    //min-height: 52px;
+    color: red;
+  }
+
+  input::placeholder {
+    //visibility: hidden;
+    color: $color-placeholder;
+    transition: color $transition;
+
+  }
+
+  label {
+    display: none;
+  }
+
+  &--disable {
+    opacity: 0.32;
+    pointer-events: none;
+  }
+
+  &__error-message {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+
+    a {
+      color: red;
+    }
+
+    .custom-input.error & {
+      visibility: visible;
+      opacity: 1;
+
+      margin-top: 15px;
+      padding-left: 23px;
+      font-family: $font-family--main;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: red;
+
+      a {
+        color: red;
+      }
+
+      @include viewport--sm {
+        padding-left: 15px;
+      }
+    }
+  }
+
+  &--select {
+
+    input {
+      padding: 0 14px;
+    }
+
+    .custom-input__dropdown-icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 4px;
+
+      // transition: fill 0.3s ease, transform 0.3s ease;
+
+      pointer-events: none;
+
+      fill: #000000;
+    }
+
+    input {
+      background-color: $color-transparent;
+      border: none;
+      //border-bottom: 4px solid green;
+      cursor: pointer;
+      // transition: border-color $transition, opacity $transition;
+
+      @include viewport--md {
+        padding: 0 0 6px 0;
+        min-height: 45px;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 600;
+      }
+    }
+
+
+    .custom-input__select-list {
+      position: absolute;
+      top: 100%;
+      left: 0;
+
+      width: 100%;
+      height: auto; //150px;
+      margin: 0;
+      padding: 0;
+      overflow-y: auto;
+
+      list-style: none;
+
+      background-color: #ffffff;
+      visibility: hidden;
+      opacity: 0;
+      z-index: 100;
+      border: 1px solid $color-line;
+
+      transition: visibility 0.3s ease, opacity 0.3s ease;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      @include viewport--md {
+        //position: relative;
+        padding: 38px 38px 28px 38px;
+        width: 404px;
+        left: -35px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 28px;
+          left: 36px;
+          right: 36px;
+          height: 4px;
+          background-color: $color-default-white;
+        }
+      }
+
+      @include viewport--sm {
+        width: calc(100% + 32px);
+        //max-width: 404px;
+        min-height: 410px;
+        left: -16px;
+        padding: 25px 0 28px 0;
+
+        &::after {
+          left: 16px;
+          right: 16px;
+        }
+
+      }
+    }
+
+    .custom-input__select-item {
+      position: relative;
+      margin: 0;
+      padding: 14px 14px;
+
+      font-size: 16px;
+      line-height: 20px;
+
+      color: #000000;
+      border-bottom: 1px solid $color-line;
+      transition: color $transition;
+
+      cursor: pointer;
+
+      &:last-child {
+        border: none;
+      }
+
+      @media (hover: hover), screen and (min-width: 0\0) {
+        &:hover,
+        &:focus {
+          color: $bg-btn;
+        }
+      }
+
+      @include viewport--sm {
+        padding: 15px 0;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 600;
+      }
+
+      &--selected {
+        font-weight: 700;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          width: 8px;
+          height: 8px;
+          transform: translateY(-50%);
+          border-radius: 50%;
+          background-color: #000000;
+        }
+      }
+    }
+
+    .custom-input__select-item + .custom-input__select-item {
+      //border-top: 1px solid rgba(#000000, 0.2);
+    }
+    &.custom-input--select-opened input {
+      //border-bottom: 4px solid yellow;
+
+
+    }
+  }
+
+  .custom-input__wrapper {
+    position: relative;
+
+    svg {
+      position: absolute;
+      right: 28px;
+      top: 50%;
+      width: 6px;
+      height: 5px;
+      // transition: transform $transition;
+
+      @include viewport--sm {
+        right: -2px;
+        top: -3px;
+      }
+    }
+  }
+
+  &.custom-input--select-opened .custom-input__wrapper {
+    svg {
+      transform: rotate(180deg);
+    }
+
+  }
+
+  &--select-opened {
+    .custom-input__select-list {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .custom-input__dropdown-icon {
+      transform: translateY(-50%) rotate(-180deg);
+    }
+  }
+}

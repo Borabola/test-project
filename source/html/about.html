@@ -66,11 +66,27 @@
           </ul>
         </div>
         <div class="catalog__search">
-          <form>
+          <form action="#" method="POST">
             <div class="custom-input catalog__search-input">
               <label class="custom-input__label" for="main-search"></label>
-              <input type="search" placeholder="Поиск" name="main-search" id="main-search">
+              <input type="search" placeholder="Поиск по сайту" name="main-search" id="main-search">
             </div>
+            <div class="custom-input  custom-input--select catalog__select">
+              <label class="" for="region">Все категории</label>
+              <div class="custom-input__wrapper catalog__select-wrap">
+                <svg width="6" height="5">
+                  <use xlink:href="#arrow-down"></use>
+                </svg>
+                <input type="text" id="region" name="region" placeholder="Выберите из списка" value="Все категории" readonly="">
+                <ul class="custom-input__select-list">
+                  <li class="custom-input__select-item" tabindex="0">Все категории</li>
+                  <li class="custom-input__select-item" tabindex="0">Категория 1</li>
+                  <li class="custom-input__select-item" tabindex="0">Категория 2</li>
+                  <li class="custom-input__select-item" tabindex="0">Категория 3</li>
+                </ul>
+              </div>
+            </div>
+            <button class="btn catalog__search-btn" type="submit">Поиск</button>
 
           </form>
         </div>
