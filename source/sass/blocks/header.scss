@@ -1,4 +1,6 @@
 .header {
+  margin-bottom: 8px;
+
   &__wrapper {
     width: 100%;
     background-color: $bg-main;
@@ -36,8 +38,6 @@
     &:active {
       background-color: $bg-btn-active;
     }
-
-
   }
 
   .main-nav__toggle {

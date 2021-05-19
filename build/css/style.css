@@ -679,6 +679,10 @@ button,
   padding: 0;
 }
 
+.header {
+  margin-bottom: 8px;
+}
+
 .header__wrapper {
   width: 100%;
   background-color: #696969;
@@ -1092,6 +1096,169 @@ button,
   text-transform: uppercase;
 }
 
+.catalog {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 24% 20px minmax(70%, auto);
+  grid-template-columns: 24% minmax(70%, auto);
+  -ms-grid-rows: 56px 20px 1fr;
+  grid-template-rows: 56px 1fr;
+  gap: 20px;
+  grid-template-areas: "menu-block search" "menu-block filter-form";
+}
+
+.catalog__menu {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: menu-block;
+}
+
+.catalog__search {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: search;
+}
+
+.catalog__filter {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: filter-form;
+}
+
+.catalog__menu-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.catalog__menu-btn {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  padding: 23px;
+  width: 62px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: none;
+  background-color: #db7200;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  outline: none;
+  z-index: 3;
+}
+
+.catalog__burger-line {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.catalog__burger-line::before,
+.catalog__burger-line::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 10px;
+  height: 1px;
+  display: block;
+  background-color: #ffffff;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.catalog__burger-line::after {
+  top: 4px;
+  width: 8px;
+}
+
+.catalog__menu-title {
+  padding: 18px 22px 17px;
+  width: calc(100% - 62px);
+  height: 56px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+  color: #ffffff;
+  background: -webkit-gradient(linear, left top, right top, from(#ff8b00), to(#ffae00));
+  background: linear-gradient(to right, #ff8b00, #ffae00);
+}
+
+.catalog__list {
+  width: 100%;
+  margin: 0;
+  padding: 10px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  list-style: none;
+  border-left: 1px solid #f1f1f1;
+  border-right: 1px solid #f1f1f1;
+}
+
+.catalog__item {
+  width: 100%;
+}
+
+.catalog__item:last-child .catalog__link {
+  border-bottom: none;
+}
+
+.catalog__link {
+  position: relative;
+  width: 100%;
+  padding: 0 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 54px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.catalog__link img {
+  margin-left: auto;
+}
+
+.catalog__link::after {
+  content: "";
+  position: absolute;
+  right: 37px;
+  top: calc(50% - 7px);
+  width: 8px;
+  height: 14px;
+  background-image: url("../img/content/arrow-right.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -1123,6 +1290,17 @@ button,
   .hero__product-link:hover,
   .hero__product-link:focus {
     opacity: 0.7;
+  }
+
+  .catalog__menu-btn:hover,
+  .catalog__menu-btn:focus {
+    background-color: #d36f00;
+  }
+
+  .catalog__link:hover::after,
+  .catalog__link:focus::after {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
   }
 }
 
