@@ -23,7 +23,6 @@ const initInputSelect = () => {
 
   const customSelectsInputs = document.querySelectorAll('.custom-input__wrapper input');
   const customSelectsItems = document.querySelectorAll('.custom-input__select-item');
-  console.log(customSelectsInputs[0])
 
   const closeAllLists = () => {
     inputSelect.forEach((el) => {

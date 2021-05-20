@@ -1024,6 +1024,33 @@ button,
   margin-right: 10px;
 }
 
+.tab__controls {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tab__items {
+  -webkit-transition: min-height 0.3s ease;
+  transition: min-height 0.3s ease;
+}
+
+.tab .tab__item {
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.tab .tab__item.hide:not(.hack-selector) {
+  display: none;
+}
+
+.tab .tab__item.no-opacity:not(.hack-selector) {
+  opacity: 0;
+}
+
 .main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1340,6 +1367,7 @@ button,
 }
 
 .catalog {
+  margin-bottom: 35px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 24% 20px minmax(70%, auto);
@@ -1544,6 +1572,76 @@ button,
   height: 56px;
 }
 
+.filter {
+  background-color: #696969;
+}
+
+.filter__cotrols {
+  width: 100%;
+  margin: 0;
+  padding: 10px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  background-color: #606a76;
+}
+
+.filter__control-item {
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.filter__control-item:last-child {
+  margin-right: 0;
+}
+
+.filter__control-item.active {
+  border-bottom: 1px solid #ffc925;
+}
+
+.filter__control-item.active > .filter__btn {
+  color: #ffffff;
+}
+
+.filter__btn {
+  margin: 0;
+  padding: 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #8a929b;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.filter__btn img {
+  margin-right: 5px;
+}
+
+.filter__form {
+  width: 100%;
+  /*&.no-opacity {
+      opacity: 0;
+    }
+
+    &.hide {
+      visibility: hidden;
+    }*/
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -1591,6 +1689,11 @@ button,
   .catalog__link:focus::after {
     -webkit-transform: translateX(5px);
     transform: translateX(5px);
+  }
+
+  .filter__btn:hover span,
+  .filter__btn:focus span {
+    opacity: 0.5;
   }
 }
 
