@@ -1,0 +1,26 @@
+.tab {
+  &__controls {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    //flex-direction: column;
+  }
+
+  &__items {
+    transition: min-height $transition;
+  }
+
+
+  .tab__item {
+    transition: opacity $transition;
+
+    &.hide:not(.hack-selector) {
+      display: none;
+    }
+
+    &.no-opacity:not(.hack-selector) {
+      opacity: 0;
+    }
+  }
+}

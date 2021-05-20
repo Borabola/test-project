@@ -66,15 +66,72 @@
           </ul>
         </div>
         <div class="catalog__search">
-          <form>
+          <form action="#" method="POST">
             <div class="custom-input catalog__search-input">
               <label class="custom-input__label" for="main-search"></label>
-              <input type="search" placeholder="Поиск" name="main-search" id="main-search">
+              <input type="search" placeholder="Поиск по сайту" name="main-search" id="main-search">
             </div>
-
+            <div class="custom-input  custom-input--select catalog__select">
+              <label class="" for="region">Все категории</label>
+              <div class="custom-input__wrapper catalog__select-wrap">
+                <svg width="6" height="5">
+                  <use xlink:href="#arrow-down"></use>
+                </svg>
+                <input type="text" id="region" name="region" placeholder="Выберите из списка" value="Все категории" readonly="">
+                <ul class="custom-input__select-list">
+                  <li class="custom-input__select-item" tabindex="0">Все категории</li>
+                  <li class="custom-input__select-item" tabindex="0">Категория 1</li>
+                  <li class="custom-input__select-item" tabindex="0">Категория 2</li>
+                  <li class="custom-input__select-item" tabindex="0">Категория 3</li>
+                </ul>
+              </div>
+            </div>
+            <button class="btn catalog__search-btn" type="submit">Поиск</button>
           </form>
         </div>
-        <div class="catalog__filter"></div>
+        <div class="catalog__filter filter tab">
+          <ul class="filter__cotrols tab__controls">
+            <li class="filter__control-item tab__control active">
+              <button class="filter__btn" type="button">
+                <img src="img/content/link1.png" width="40" height="17" alt="Ссылка 1">
+                <span>Ссылка 1 </span>
+              </button>
+            </li>
+            <li class="filter__control-item tab__control ">
+              <button class="filter__btn" type="button">
+                <img src="img/content/link2.png" width="46" height="32" alt="Ссылка 2">
+                <span>Ссылка 2 </span>
+              </button>
+            </li>
+            <li class="filter__control-item tab__control">
+              <button class="filter__btn" type="button">
+                <img src="img/content/link3.png" width="25" height="25" alt="Ссылка 3">
+                <span>Ссылка 3 </span>
+              </button>
+            </li>
+            <li class="filter__control-item tab__control">
+              <button class="filter__btn" type="button">
+                <img src="img/content/link4.png" width="22" height="29" alt="Ссылка 4">
+                <span>Ссылка 4 </span>
+              </button>
+            </li>
+            <li class="filter__control-item tab__control ">
+              <button class="filter__btn" type="button">
+                <img src="img/content/link5.png" width="26" height="24" alt="Ссылка 5">
+                <span>Ссылка 5 </span>
+              </button>
+            </li>
+          </ul>
+          <div class=" tab__items">
+            <div class="filter__form tab__item">1</div>
+            <div class="filter__form tab__item no-opacity hide">2</div>
+            <div class="filter__form tab__item no-opacity hide">3</div>
+            <div class="filter__form tab__item no-opacity hide">4</div>
+            <div class="filter__form tab__item no-opacity hide">5</div>
+
+          </div>
+
+        </div>
 
 
       </section>
