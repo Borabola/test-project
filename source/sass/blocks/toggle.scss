@@ -1,0 +1,138 @@
+.toggle {
+  width: 281px;
+  margin-bottom: 25px;
+
+  input {
+    @include visually-hidden;
+
+    &:focus + .toggle__label {
+      opacity: 0.9;
+    }
+
+    &:checked + .toggle__label {
+      background-color: $color-toggle;
+
+      @media (hover: hover), screen and (min-width: 0\0) {
+        &:hover,
+        &:focus {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+
+  .toggle__orange-block {
+    display: block;
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 2px;
+    width: calc(50% - 4px);
+    min-height: 38px;
+    background-color: $bg-btn;
+  }
+  input {
+    &:checked + .toggle__label {
+      .toggle__right {
+        color: $color-default-white;
+
+        @media (hover: hover), screen and (min-width: 0\0) {
+          &:hover,
+          &:focus {
+            color: $color-active;
+          }
+        }
+      }
+
+      .toggle__left {
+          color: $color-toggle;
+      }
+
+      .toggle__orange-block {
+        left: 50%;
+      }
+    }
+  }
+}
+
+.toggle__label {
+  position: relative;
+  display: flex;
+  padding: 4px;
+  width: 100%;
+
+  background-color: $color-toggle;
+  transition: background-color $transition;
+  cursor: pointer;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+  }
+}
+
+.toggle__orange-block {
+  display: none;
+
+  @include viewport--md {
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    width: calc(50% - 16px);
+    min-height: 28px;
+    background-color: $bg-btn;
+    box-shadow: 0px 0.5px 1.75px rgba(0, 0, 0, 0.039), 0px 1.85px 6.25px rgba(0, 0, 0, 0.19);
+    border-radius: 24px;
+    z-index: 0;
+    opacity: .99;
+  }
+}
+.toggle__left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding: 4px;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: $color-default-white;
+  z-index: 1;
+
+  span {
+    display: block;
+    margin-top: 2px;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      color: $color-active;
+    }
+  }
+}
+
+.toggle__right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0;
+  color: $color-toggle;
+  z-index: 1;
+
+  span {
+    display: inline-flex;
+  }
+}

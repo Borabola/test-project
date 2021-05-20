@@ -123,8 +123,12 @@
             </li>
           </ul>
           <div class=" tab__items">
-            <div class="filter__form tab__item">1</div>
-            <div class="filter__form tab__item no-opacity hide">2</div>
+            <div class="filter__form tab__item">
+              @@include("source/html/components/filter-form.html")
+            </div>
+            <div class="filter__form tab__item no-opacity hide">
+              2
+            </div>
             <div class="filter__form tab__item no-opacity hide">3</div>
             <div class="filter__form tab__item no-opacity hide">4</div>
             <div class="filter__form tab__item no-opacity hide">5</div>
@@ -140,14 +144,7 @@
     @@include("source/html/base/footer.html")
 
     @@include("source/html/base/modal.html", {
-      "name": "feedback"
-    })
-
-    @@include("source/html/base/modal.html", {
-      "name": "success",
-      "fitContent": true,
-      "noScale": true,
-      "mod": "some-mod"
+      "name": "callback"
     })
   </div>
 

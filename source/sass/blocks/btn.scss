@@ -43,4 +43,37 @@
   svg {
     margin-right: 10px;
   }
+
+  &--reset {
+    background-color: $color-reset;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        background-color: $color-reset-hover;
+      }
+    }
+
+    &:active {
+      background-color: $color-reset-hover;
+    }
+  }
+
+  &--gradient {
+    background: linear-gradient(to right, #ff8b00, #ffae00);
+    transition: background $transition;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        background: linear-gradient(to right, #d36e00, #e59100);
+      }
+
+      &:active {
+        background: linear-gradient(to right, #d36e00, #e59100);
+      }
+    }
+  }
+
+
 }

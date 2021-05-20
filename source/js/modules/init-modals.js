@@ -5,6 +5,8 @@ const modalFeedback = document.querySelector('.modal--feedback');
 const modalFeedbackBtns = document.querySelectorAll('[data-modal="feedback"]');
 const modalSuccess = document.querySelector('.modal--success');
 const modalSuccessBtns = document.querySelectorAll('[data-modal="success"]');
+const modalCallback = document.querySelector('.modal--callback');
+const modalCallbackBtns = document.querySelectorAll('[data-modal="callback"]');
 
 // аргументы setupModal(modal, closeCallback, modalBtns, openCallback, noPrevDefault, preventScrollLock)
 // возможна инициализация только с первыми аргументом,
@@ -26,6 +28,9 @@ const initModals = () => {
   }
   if (modalSuccess && modalSuccessBtns.length) {
     setupModal(modalSuccess, false, modalSuccessBtns);
+  }
+  if (modalCallback && modalCallbackBtns.length) {
+    setupModal(modalCallback, false, modalCallbackBtns);
   }
 };
 

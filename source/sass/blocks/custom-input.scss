@@ -253,15 +253,6 @@
         }
       }
     }
-
-    .custom-input__select-item + .custom-input__select-item {
-      //border-top: 1px solid rgba(#000000, 0.2);
-    }
-    &.custom-input--select-opened input {
-      //border-bottom: 4px solid yellow;
-
-
-    }
   }
 
   .custom-input__wrapper {
@@ -273,12 +264,17 @@
       top: 50%;
       width: 6px;
       height: 5px;
-      // transition: transform $transition;
+      color: $color-select-switch1;
+      transition: transform $transition;
 
       @include viewport--sm {
         right: -2px;
         top: -3px;
       }
+    }
+
+    &.f-block__select-wrap svg{
+      color: $color-select-switch2;
     }
   }
 
