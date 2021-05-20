@@ -1998,6 +1998,15 @@ button,
   color: #ffffff;
 }
 
+.f-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 .callback {
   display: -webkit-box;
   display: -ms-flexbox;
