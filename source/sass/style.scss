@@ -27,17 +27,6 @@
 @import "blocks/hero";
 @import "blocks/catalog";
 @import "blocks/filter";
-
-
-
-// используйте это для отключения ховеров на тач устройствах
-// ! но не используйте это для текстовых полей ( input, textarea )
-// также для любых transition обязательно указывайте transition-property
-// transition: color $default-transition-settings, а не transition: $default-transition-settings
-
-/* @media (hover: hover), screen and (min-width: 0\0) {
-  &:hover,
-  &:focus {
-    color: red;
-  }
-} */
+@import "blocks/toggle";
+@import "blocks/f-block";
+@import "blocks/callback";

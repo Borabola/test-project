@@ -66,12 +66,17 @@
       width: 100%;
       padding: 20px;
     }
+
+    .modal--callback & {
+      max-width: 380px;
+    }
   }
 
   &__close-btn {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: -20px;
+    right: -20px;
+    color: $color-default-white;
   }
 
   &--responsive {
