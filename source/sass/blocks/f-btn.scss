@@ -2,5 +2,11 @@
   display: flex;
   justify-content: space-between;
 
+  @media (max-width: 520px) {
+    flex-direction: column;
 
+    & > button:nth-child(n):not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
 }

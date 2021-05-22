@@ -7,6 +7,7 @@ import {initTabs} from './modules/tabs';
 import {initFormTab} from './modules/init-form-tab';
 import {initPhoneMask} from './modules/init-phone-mask';
 import {initBurgerAction} from './modules/init-burger-action';
+import {initAccordion} from './modules/init-accordion';
 
 // Utils
 // ---------------------------------
@@ -23,3 +24,4 @@ initTabs();
 initFormTab();
 initPhoneMask();
 initBurgerAction();
+initAccordion();
