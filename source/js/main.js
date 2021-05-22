@@ -6,6 +6,7 @@ import {initInputSelect} from './modules/init-custom-select';
 import {initTabs} from './modules/tabs';
 import {initFormTab} from './modules/init-form-tab';
 import {initPhoneMask} from './modules/init-phone-mask';
+import {initBurgerAction} from './modules/init-burger-action';
 
 // Utils
 // ---------------------------------
@@ -21,3 +22,4 @@ initInputSelect();
 initTabs();
 initFormTab();
 initPhoneMask();
+initBurgerAction();

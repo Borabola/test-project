@@ -111,10 +111,6 @@
 
   &--select {
 
-    input {
-      padding: 0 14px;
-    }
-
     .custom-input__dropdown-icon {
       position: absolute;
       top: 50%;
@@ -129,19 +125,13 @@
     }
 
     input {
+      padding: 0 14px;
       background-color: $color-transparent;
       border: none;
       //border-bottom: 4px solid green;
       cursor: pointer;
       // transition: border-color $transition, opacity $transition;
 
-      @include viewport--md {
-        padding: 0 0 6px 0;
-        min-height: 45px;
-        font-size: 20px;
-        line-height: 24px;
-        font-weight: 600;
-      }
     }
 
 

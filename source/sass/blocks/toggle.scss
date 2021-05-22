@@ -31,6 +31,7 @@
     min-height: 38px;
     background-color: $bg-btn;
   }
+
   input {
     &:checked + .toggle__label {
       .toggle__right {
@@ -73,23 +74,6 @@
   }
 }
 
-.toggle__orange-block {
-  display: none;
-
-  @include viewport--md {
-    display: block;
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    width: calc(50% - 16px);
-    min-height: 28px;
-    background-color: $bg-btn;
-    box-shadow: 0px 0.5px 1.75px rgba(0, 0, 0, 0.039), 0px 1.85px 6.25px rgba(0, 0, 0, 0.19);
-    border-radius: 24px;
-    z-index: 0;
-    opacity: .99;
-  }
-}
 .toggle__left {
   position: relative;
   display: flex;

@@ -8,10 +8,22 @@
 
   &__nav {
     display: flex;
+
+    @include viewport--sm {
+      &.container {
+        padding: 0;
+      }
+    }
   }
 
   &__user-nav {
     margin-left: auto;
+    background-color: $bg-main;
+    z-index: 9;
+
+    @media (max-width: 520px) {
+      width: calc(100% - 161px);
+    }
   }
 
   &__user-btn {
@@ -27,6 +39,7 @@
     background-color: $bg-btn;
     border: none;
     transition: background-color $transition;
+    z-index: 9;
 
     @media (hover: hover), screen and (min-width: 0\0) {
       &:hover,
@@ -38,9 +51,63 @@
     &:active {
       background-color: $bg-btn-active;
     }
+
+    @media (max-width: 520px) {
+      width: 100%;
+    }
   }
 
-  .main-nav__toggle {
+  &__overlay {
     display: none;
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 50px);
+    top: 50px;
+    left: 0;
+    background-color: $color-transparent;
+    opacity: 0;
+    z-index: 6;
+  }
+
+  &__overlay.active {
+    display: block;
+    transition: opacity $modal-transition-settings;
+  }
+
+  &__overlay.show {
+    opacity: 0.8;
+    transition: opacity $modal-transition-settings;
+  }
+
+  &.hide .main-nav__wrapper {
+    animation: hide-to-left 0.3s ease;
+    animation-fill-mode: forwards;
+  }
+
+  &.show .main-nav__wrapper {
+    animation: show-from-left 0.3s ease;
+    animation-fill-mode: forwards;
+    overflow-y: auto;
+    z-index: 9;
+  }
+}
+
+@keyframes hide-to-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes show-from-left {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
