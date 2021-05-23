@@ -26,7 +26,6 @@
 
     border: none;
     outline: none;
-    // transition: color $transition, border $transition, background-color $transition;
     caret-color: transparent;
 
 
@@ -111,8 +110,6 @@
       transform: translateY(-50%);
       right: 4px;
 
-      // transition: fill 0.3s ease, transform 0.3s ease;
-
       pointer-events: none;
 
       fill: #000000;
@@ -122,10 +119,7 @@
       padding: 0 14px;
       background-color: $color-transparent;
       border: none;
-      //border-bottom: 4px solid green;
       cursor: pointer;
-      // transition: border-color $transition, opacity $transition;
-
     }
 
 
@@ -156,8 +150,6 @@
 
       -ms-overflow-style: none;
       scrollbar-width: none;
-
-
     }
 
     .custom-input__select-item {
@@ -171,7 +163,6 @@
       color: #000000;
       border-bottom: 1px solid $color-line;
       transition: color $transition;
-
       cursor: pointer;
 
       &:last-child {

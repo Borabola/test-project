@@ -12,7 +12,6 @@
 
     @media (max-width: 520px) {
       flex-direction: column;
-      //align-items: flex-start;
       align-items: center;
     }
   }
@@ -102,8 +101,6 @@
     @media (max-width: 488px) {
       flex-direction: column;
     }
-
-
   }
 
   &__item {
@@ -242,6 +239,5 @@
     @include viewport--md {
       display: none;
     }
-
   }
 }

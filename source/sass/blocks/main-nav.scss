@@ -131,12 +131,6 @@
             top: 24px;
           }
         }
-
-        .header.show & {
-          @include viewport--sm {
-            //opacity: 0;
-          }
-        }
       }
 
       &::before {
@@ -174,18 +168,13 @@
     @include viewport--sm {
       .header.show &,
       .header.hide & {
-      @include viewport--sm {
         background-color: $color-white;
         opacity: 0;
       }
-    }
 
     .header.show & {
-      @include viewport--sm {
         opacity: 0;
-      }
     }
     }
   }
-
 }
