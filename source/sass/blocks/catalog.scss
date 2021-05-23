@@ -120,8 +120,6 @@
 
     @include viewport--md {
       transition: background-color $transition;
-
-
     }
   }
 
@@ -214,8 +212,6 @@
     position: relative;
     input {
       padding-top: 6px;
-
-
     }
 
     &:before {

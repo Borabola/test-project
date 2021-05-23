@@ -45,7 +45,6 @@ const onBlurPhoneInput = ({target}) => {
 };
 
 const initPhoneMask = () => {
-  console.log('111')
   const phoneInputs = document.querySelectorAll('[type="tel"]');
   if (phoneInputs.length) {
     phoneInputs.forEach((input) => {

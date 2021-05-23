@@ -2576,6 +2576,7 @@ button,
 }
 
 .product-card__action-btn {
+  width: 108px;
   padding: 0;
   margin-bottom: 10px;
   display: -webkit-box;
@@ -2948,6 +2949,16 @@ button,
     top: 32px;
   }
 
+  .header.show .main-nav__burger-line,
+  .header.hide .main-nav__burger-line {
+    background-color: #f2f2f2;
+    opacity: 0;
+  }
+
+  .header.show .main-nav__burger-line {
+    opacity: 0;
+  }
+
   .modal__wrapper {
     padding: 60px 16px;
   }
@@ -3095,16 +3106,6 @@ button,
     top: 24px;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
-  }
-
-  .header.show .main-nav__burger-line,
-  .header.hide .main-nav__burger-line {
-    background-color: #f2f2f2;
-    opacity: 0;
-  }
-
-  .header.show .main-nav__burger-line {
-    opacity: 0;
   }
 }
 

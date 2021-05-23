@@ -8,6 +8,7 @@ import {initFormTab} from './modules/init-form-tab';
 import {initPhoneMask} from './modules/init-phone-mask';
 import {initBurgerAction} from './modules/init-burger-action';
 import {initAccordion} from './modules/init-accordion';
+import {initBtnCount} from './modules/init-product-count';
 
 // Utils
 // ---------------------------------
@@ -25,3 +26,4 @@ initFormTab();
 initPhoneMask();
 initBurgerAction();
 initAccordion();
+initBtnCount();
