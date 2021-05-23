@@ -4,10 +4,15 @@
   &__cotrols {
     width: 100%;
     margin: 0;
-    padding: 10px 25px 0 25px;
+    padding: 0 25px 0 25px;
     display: flex;
     list-style: none;
     background-color: $tabs-btn;
+
+    @include viewport--sm {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__control-item {
@@ -30,14 +35,31 @@
 
     &.active > .filter__btn {
       color: $color-default-white;
+
+      img:first-child {
+        display: none;
+      }
+      img:nth-child(2) {
+        display: block;
+      }
+    }
+
+    @include viewport--sm {
+      border: 1px solid $color-transparent;
+
+      &.active {
+        border: 1px solid $color-active;
+      }
     }
   }
 
   &__btn {
     width: 100%;
     margin: 0;
-    padding: 19px 20px 19px 19px;
+    padding: 16px 20px 16px 19px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     font-size: 18px;
     font-weight: 700;
@@ -51,7 +73,12 @@
 
     img {
       margin-right: 12px;
+
+      &:nth-child(2) {
+        display: none;
+      }
     }
+
 
 
     @media (hover: hover), screen and (min-width: 0\0) {
@@ -60,10 +87,15 @@
         opacity: 0.7;
       }
     }
+
+    @media (max-width: 1090px) {
+      font-size: 16px;
+    }
   }
 
   &__form {
     width: 100%;
-    padding: 25px 35px;
+    padding: 25px 35px 29px;
+    min-height: 287px;
   }
  }

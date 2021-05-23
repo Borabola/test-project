@@ -6,6 +6,21 @@
     margin-left: -12px;
     display: flex;
     align-items: center;
+
+    @include viewport--sm {
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 200px;
+      margin: 0;
+      background-color: $bg-main;
+      z-index: 7;
+
+      .header--opened & {
+        display: flex;
+      }
+    }
   }
 
   &__list {
@@ -13,10 +28,24 @@
     padding: 0;
     display: flex;
     list-style: none;
+
+    @include viewport--sm {
+
+      .header--opened & {
+        display: flex;
+        flex-direction: column;
+      }
+    }
   }
+
   &__item {
     margin-right: 7px;
     padding: 11px 0 15px;
+
+    @include viewport--sm {
+      padding: 5px 0 5px;
+      margin-right: 0;
+    }
   }
 
   &__link {
@@ -40,6 +69,10 @@
         right: 0;
         height: 1px;
         background-color: $color-active;
+
+        @include viewport--sm {
+          display: none;
+        }
       }
     }
 
@@ -48,6 +81,110 @@
       &:focus {
         color: $color-default-white;
       }
+    }
+
+    @include viewport--sm {
+      padding: 7px 10px;
+
+      &--active {
+        color: $color-default-white;
+      }
+    }
+  }
+
+  &__toggle {
+    display: none;
+
+    .header--opened {
+      display: block;
+    }
+  }
+
+  .main-nav__toggle {
+    display: none;
+
+    @include viewport--sm {
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 3;
+      padding: 10px;
+      margin-left: 7px;
+      background-color: transparent;
+      border: 0;
+      outline: 0;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: $color-default-white;
+        transition: height $transition, transform $transition, top $transition, opacity $transition;
+
+        .header.show &,
+        .header.hide & {
+          @include viewport--sm {
+            background-color: $color-white;
+            top: 24px;
+          }
+        }
+
+        .header.show & {
+          @include viewport--sm {
+            //opacity: 0;
+          }
+        }
+      }
+
+      &::before {
+        top: 16px;
+
+        .header--opened & {
+          @include viewport--sm {
+            top: 24px;
+            transform: rotate(45deg);
+          }
+        }
+      }
+
+      &::after {
+        top: 32px;
+
+        .header--opened & {
+          @include viewport--sm {
+            top: 24px;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+
+  &__burger-line {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: $color-default-white;
+    transition: opacity $transition;
+
+    @include viewport--sm {
+      .header.show &,
+      .header.hide & {
+      @include viewport--sm {
+        background-color: $color-white;
+        opacity: 0;
+      }
+    }
+
+    .header.show & {
+      @include viewport--sm {
+        opacity: 0;
+      }
+    }
     }
   }
 
