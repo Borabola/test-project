@@ -4,7 +4,7 @@
   &__cotrols {
     width: 100%;
     margin: 0;
-    padding: 10px 25px 0 25px;
+    padding: 0 25px 0 25px;
     display: flex;
     list-style: none;
     background-color: $tabs-btn;
@@ -35,6 +35,13 @@
 
     &.active > .filter__btn {
       color: $color-default-white;
+
+      img:first-child {
+        display: none;
+      }
+      img:nth-child(2) {
+        display: block;
+      }
     }
 
     @include viewport--sm {
@@ -49,7 +56,7 @@
   &__btn {
     width: 100%;
     margin: 0;
-    padding: 19px 20px 19px 19px;
+    padding: 16px 20px 16px 19px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -66,7 +73,12 @@
 
     img {
       margin-right: 12px;
+
+      &:nth-child(2) {
+        display: none;
+      }
     }
+
 
 
     @media (hover: hover), screen and (min-width: 0\0) {
@@ -83,7 +95,7 @@
 
   &__form {
     width: 100%;
-    padding: 25px 35px;
+    padding: 25px 35px 29px;
     min-height: 287px;
   }
  }

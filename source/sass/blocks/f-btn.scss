@@ -9,4 +9,16 @@
       margin-bottom: 10px;
     }
   }
+
+  &__reset {
+    padding: 15px 38px;
+    font-size: 14px;
+    text-transform: none;
+  }
+
+  &__submit {
+    padding: 15px 32px;
+    font-size: 14px;
+    font-weight: 700;
+  }
 }

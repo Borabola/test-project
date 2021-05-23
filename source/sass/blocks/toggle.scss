@@ -1,6 +1,11 @@
 .toggle {
   width: 281px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+
+  @include viewport--sm {
+    width: 100%;
+    max-width: 281px;
+  }
 
   input {
     @include visually-hidden;

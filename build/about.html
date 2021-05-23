@@ -28,8 +28,12 @@
       <symbol id="arrow-down" viewBox="0 0 6 5">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M3 5L0 0H6L3 5Z" fill="currentColor" />
       </symbol>
+      <symbol id="arrow-long2" viewBox="0 0 15 3">
+        <path d="M1622,686v-1h12v1h-12Z" transform="translate(-1622 -684)" fill="currentColor" />
+        <path d="M1637,685.5l-3-1.5v3l3-1.5" transform="translate(-1622 -684)" fill="currentColor" />
+      </symbol>
       <symbol id="arrow-right" viewBox="0 0 7.969 12.969">
-        <path id="Rounded_Rectangle_2_copy_4" data-name="Rounded Rectangle 2 copy 4" class="cls-1" d="M564.586,588.964l4.949,4.95a1.5,1.5,0,1,1-2.121,2.121l-4.95-4.95A1.5,1.5,0,0,1,564.586,588.964Zm0,12.071,4.949-4.95a1.5,1.5,0,1,0-2.121-2.121l-4.95,4.95A1.5,1.5,0,0,0,564.586,601.035Z" transform="translate(-562.031 -588.531)" />
+        <path data-name="Rounded Rectangle 2 copy 4" class="cls-1" d="M564.586,588.964l4.949,4.95a1.5,1.5,0,1,1-2.121,2.121l-4.95-4.95A1.5,1.5,0,0,1,564.586,588.964Zm0,12.071,4.949-4.95a1.5,1.5,0,1,0-2.121-2.121l-4.95,4.95A1.5,1.5,0,0,0,564.586,601.035Z" transform="translate(-562.031 -588.531)" />
       </symbol>
       <symbol id="cross" viewBox="0 0 11.688 11.688">
         <path d="M698.646,566.353l0.707-.707,11,11-0.708.707Zm11.708,0-0.708-.707-11,11,0.707,0.707Z" transform="translate(-698.656 -565.656)" fill="currentColor" />
@@ -126,7 +130,9 @@
       </div>
     </header>
     <main>
+      <h1 class="visually-hidden">Выбор колес</h1>
       <section class="catalog container">
+        <h2 class="visually-hidden">Подбор товара</h2>
         <div class="catalog__menu accordion">
           <div class="catalog__menu-wrap">
             <button class="catalog__menu-btn" type="button">
@@ -201,37 +207,42 @@
             <li class="filter__control-item tab__control active">
               <button class="filter__btn" type="button">
                 <img src="img/content/link1.png" width="40" height="17" alt="Ссылка 1">
+                <img src="img/content/link1-active.png" width="40" height="17" alt="Ссылка 1 активная">
                 <span>Ссылка 1 </span>
               </button>
             </li>
             <li class="filter__control-item tab__control ">
               <button class="filter__btn" type="button">
                 <img src="img/content/link2.png" width="46" height="32" alt="Ссылка 2">
+                <img src="img/content/link2-active.png" width="46" height="32" alt="Ссылка 2 активная">
                 <span>Ссылка 2 </span>
               </button>
             </li>
             <li class="filter__control-item tab__control">
               <button class="filter__btn" type="button">
                 <img src="img/content/link3.png" width="25" height="25" alt="Ссылка 3">
+                <img src="img/content/link3-active.png" width="25" height="25" alt="Ссылка 3 активная">
                 <span>Ссылка 3 </span>
               </button>
             </li>
             <li class="filter__control-item tab__control">
               <button class="filter__btn" type="button">
                 <img src="img/content/link4.png" width="22" height="29" alt="Ссылка 4">
+                <img src="img/content/link4-active.png" width="22" height="29" alt="Ссылка 4 активная">
                 <span>Ссылка 4 </span>
               </button>
             </li>
             <li class="filter__control-item tab__control ">
               <button class="filter__btn" type="button">
                 <img src="img/content/link5.png" width="26" height="24" alt="Ссылка 5">
+                <img src="img/content/link5-active.png" width="26" height="24" alt="Ссылка 5 активная">
                 <span>Ссылка 5 </span>
               </button>
             </li>
           </ul>
           <div class=" tab__items">
             <div class="filter__form tab__item">
-              <form action="" method="POST">
+              <form action="/" method="POST">
                 <div class="toggle">
                   <input type="checkbox" id="toggleTab1" name="toggleTab1">
                   <label class="toggle__label" for="toggleTab1">
@@ -246,12 +257,12 @@
                 </div>
                 <div class="f-block">
                   <div class="custom-input  custom-input--select f-block__select">
-                    <label class="" for="region">Все категории</label>
+                    <label class="" for="category1">Все категории</label>
                     <div class="custom-input__wrapper f-block__select-wrap">
                       <svg width="6" height="5">
                         <use xlink:href="#arrow-down"></use>
                       </svg>
-                      <input type="text" id="region" name="region" placeholder="Select 1" value="Select 1" readonly="">
+                      <input type="text" id="category1" name="category" placeholder="Select 1" value="Select 1" readonly="">
                       <ul class="custom-input__select-list">
                         <li class="custom-input__select-item" tabindex="0">Все категории</li>
                         <li class="custom-input__select-item" tabindex="0">Категория 1</li>
@@ -261,12 +272,12 @@
                     </div>
                   </div>
                   <div class="custom-input  custom-input--select f-block__select">
-                    <label class="" for="region">Все категории</label>
+                    <label class="" for="category2">Все категории</label>
                     <div class="custom-input__wrapper f-block__select-wrap">
                       <svg width="6" height="5">
                         <use xlink:href="#arrow-down"></use>
                       </svg>
-                      <input type="text" id="region" name="region" placeholder="Select 2" value="Select 2" readonly="">
+                      <input type="text" id="category2" name="category" placeholder="Select 2" value="Select 2" readonly="">
                       <ul class="custom-input__select-list">
                         <li class="custom-input__select-item" tabindex="0">Все категории</li>
                         <li class="custom-input__select-item" tabindex="0">Категория 1</li>
@@ -276,12 +287,12 @@
                     </div>
                   </div>
                   <div class="custom-input  custom-input--select f-block__select">
-                    <label class="" for="region">Все категории</label>
+                    <label class="" for="category3">Все категории</label>
                     <div class="custom-input__wrapper f-block__select-wrap">
                       <svg width="6" height="5">
                         <use xlink:href="#arrow-down"></use>
                       </svg>
-                      <input type="text" id="region" name="region" placeholder="Select 3" value="Select 3" readonly="">
+                      <input type="text" id="category3" name="category" placeholder="Select 3" value="Select 3" readonly="">
                       <ul class="custom-input__select-list">
                         <li class="custom-input__select-item" tabindex="0">Все категории</li>
                         <li class="custom-input__select-item" tabindex="0">Категория 1</li>
@@ -291,12 +302,12 @@
                     </div>
                   </div>
                   <div class="custom-input  custom-input--select f-block__select">
-                    <label class="" for="region">Все категории</label>
+                    <label class="" for="category4">Все категории</label>
                     <div class="custom-input__wrapper f-block__select-wrap">
                       <svg width="6" height="5">
                         <use xlink:href="#arrow-down"></use>
                       </svg>
-                      <input type="text" id="region" name="region" placeholder="Select 4" value="Select 4" readonly="">
+                      <input type="text" id="category4" name="category4" placeholder="Select 4" value="Select 4" readonly="">
                       <ul class="custom-input__select-list">
                         <li class="custom-input__select-item" tabindex="0">Все категории</li>
                         <li class="custom-input__select-item" tabindex="0">Категория 1</li>
@@ -306,12 +317,12 @@
                     </div>
                   </div>
                   <div class="custom-input  custom-input--select f-block__select f-block__select--5">
-                    <label class="" for="region">Все категории</label>
+                    <label class="" for="category5">Все категории</label>
                     <div class="custom-input__wrapper f-block__select-wrap">
                       <svg width="6" height="5">
                         <use xlink:href="#arrow-down"></use>
                       </svg>
-                      <input type="text" id="region" name="region" placeholder="Select 5" value="Select 5" readonly="">
+                      <input type="text" id="category5" name="category" placeholder="Select 5" value="Select 5" readonly="">
                       <ul class="custom-input__select-list">
                         <li class="custom-input__select-item" tabindex="0">Все категории</li>
                         <li class="custom-input__select-item" tabindex="0">Категория 1</li>
@@ -321,12 +332,12 @@
                     </div>
                   </div>
                   <div class="custom-input  custom-input--select f-block__select f-block__select--6">
-                    <label class="" for="region">Все категории</label>
+                    <label class="" for="category6">Все категории</label>
                     <div class="custom-input__wrapper f-block__select-wrap">
                       <svg width="6" height="5">
                         <use xlink:href="#arrow-down"></use>
                       </svg>
-                      <input type="text" id="region" name="region" placeholder="Select 6" value="Select 6" readonly="">
+                      <input type="text" id="category6" name="category" placeholder="Select 6" value="Select 6" readonly="">
                       <ul class="custom-input__select-list">
                         <li class="custom-input__select-item" tabindex="0">Все категории</li>
                         <li class="custom-input__select-item" tabindex="0">Категория 1</li>
@@ -336,12 +347,12 @@
                     </div>
                   </div>
                   <div class="custom-input  custom-input--select f-block__select f-block__select--7">
-                    <label class="" for="region">Все категории</label>
+                    <label class="" for="category7">Все категории</label>
                     <div class="custom-input__wrapper f-block__select-wrap">
                       <svg width="6" height="5">
                         <use xlink:href="#arrow-down"></use>
                       </svg>
-                      <input type="text" id="region" name="region" placeholder="Select 7" value="Select 7" readonly="">
+                      <input type="text" id="category7" name="category" placeholder="Select 7" value="Select 7" readonly="">
                       <ul class="custom-input__select-list">
                         <li class="custom-input__select-item" tabindex="0">Все категории</li>
                         <li class="custom-input__select-item" tabindex="0">Категория 1</li>
@@ -367,13 +378,13 @@
                   </div>
                 </div>
                 <div class="f-btn">
-                  <button class="btn btn--reset" type="reset">
+                  <button class="f-btn__reset btn btn--reset" type="reset">
                     <svg width="11" height="11">
                       <use xlink:href="#cross"></use>
                     </svg>
                     Очистить фильтр
                   </button>
-                  <button class="btn btn--gradient" type="submit">
+                  <button class="f-btn__submit btn btn--gradient" type="submit">
                     Применить фильтр
                   </button>
                 </div>
@@ -388,6 +399,249 @@
           </div>
         </div>
       </section>
+      <section class="product-card container">
+        <div class="product-card__title-wrap">
+          <h2 class="product-card__title">Карточки товаров</h2>
+          <div class="product-card__link">
+            Ссылка в каталог
+            <svg width="15" height="3">
+              <use xlink:href="#arrow-long2"></use>
+            </svg>
+          </div>
+        </div>
+        <ul class="product-card__list">
+          <li class="product-card__item">
+            <div class="product-card__mark">Mark</div>
+            <div class="product-card__name">Антифриз Fosser Antifreeze </div>
+            <div class="product-card__promo">FA 12 Readymix 1 л Concentrat, Germany</div>
+            <div class="product-card__feedback-wrap">
+              <div class="product-card__feedback">
+                <div class="product-card__stars">
+                  <div class="product-card__gray"></div>
+                  <div class="product-card__gold" style="width: 100%;"></div>
+                </div>
+                <a class="product-card__feedback-link" href="#"> Отзывы (<span>10</span>)</a>
+              </div>
+              <div class="product-card__stock">В наличии: <span>24 шт.</span></div>
+            </div>
+            <div class="product-card__picture-wrap">
+              <ul class="product-card__options">
+                <li class="product-card__options-item">
+                  <img src="img/content/sun.png" width="38" height="38" alt="Летняя разина">
+                  Летняя
+                </li>
+                <li class="product-card__options-item">
+                  <img src="img/content/passenger-car.png" width="53" height="26" alt="Легковая">
+                  Легковая
+                </li>
+                <li class="product-card__options-item">
+                  <img src="img/content/new.png" width="48" height="25" alt="Новая">
+                  Новая
+                </li>
+              </ul>
+              <div class="product-card__img-wrap">
+                <img src="img/content/product1.png" width="157" height="205" alt="Антифриз Fosser Antifreeze">
+              </div>
+            </div>
+            <ul class="product-card__flag-wrap">
+              <li class="product-card__flag product-card__flag--new">
+                <span>Новинка</span>
+              </li>
+              <li class="product-card__flag product-card__flag--hit">
+                <span>Хит</span>
+              </li>
+              <li class="product-card__flag product-card__flag--discount">
+                <span>Скидка</span>
+              </li>
+            </ul>
+            <div class="product-card__price-wrap">
+              <div class="product-card__new-price">599 <span>грн.</span></div>
+              <div class="product-card__old-price">1 250 грн.</div>
+            </div>
+            <button class="btn btn--gradient product-card__btn" type="button">
+              <img src="img/content/icon-basket.png" width="28" height="24" alt="Корзина">
+              купить товар
+            </button>
+            <div class="product-card__action-wrap">
+              <button class="product-card__action-btn" type="button">
+                <img src="img/content/icon-compare.png" width="34" height="26" alt="Добавить к сравнению">
+                Сравнить товар
+              </button>
+              <button class="product-card__action-btn" type="button">
+                <img src="img/content/icon-favorite.png" width="30" height="29" alt="Добавить в избранное">
+                В избранное
+              </button>
+            </div>
+          </li>
+          <li class="product-card__item">
+            <div class="product-card__mark">Mark</div>
+            <div class="product-card__name">Антифриз Fosser Antifreeze </div>
+            <div class="product-card__promo">FA 12 Readymix 1 л Concentrat, Germany</div>
+            <div class="product-card__feedback-wrap">
+              <div class="product-card__feedback">
+                <div class="product-card__stars">
+                  <div class="product-card__gray"></div>
+                  <div class="product-card__gold" style="width: 62%;"></div>
+                </div>
+                <a class="product-card__feedback-link" href="#"> Отзывы (<span>10</span>)</a>
+              </div>
+              <div class="product-card__stock">В наличии: <span>24 шт.</span></div>
+            </div>
+            <div class="product-card__picture-wrap">
+              <ul class="product-card__options">
+                <li class="product-card__options-item">
+                  <img src="img/content/sun.png" width="38" height="38" alt="Летняя разина">
+                  Летняя
+                </li>
+                <li class="product-card__options-item">
+                  <img src="img/content/new.png" width="48" height="25" alt="Новая">
+                  Новая
+                </li>
+              </ul>
+              <div class="product-card__img-wrap">
+                <img src="img/content/product2.png" width="198" height="233" alt="Антифриз Fosser Antifreeze">
+              </div>
+            </div>
+            <ul class="product-card__flag-wrap">
+              <li class="product-card__flag product-card__flag--new">
+                <span>Новинка</span>
+              </li>
+              <li class="product-card__flag product-card__flag--hit">
+                <span>Хит</span>
+              </li>
+            </ul>
+            <div class="product-card__price-wrap">
+              <div class="product-card__new-price">599 <span>грн.</span></div>
+              <div class="product-card__old-price">1 250 грн.</div>
+            </div>
+            <button class="btn btn--gradient product-card__btn" type="button">
+              <img src="img/content/icon-basket.png" width="28" height="24" alt="Корзина">
+              купить товар
+            </button>
+            <div class="product-card__action-wrap">
+              <button class="product-card__action-btn" type="button">
+                <img src="img/content/icon-compare.png" width="34" height="26" alt="Добавить к сравнению">
+                Сравнить товар
+              </button>
+              <button class="product-card__action-btn" type="button">
+                <img src="img/content/icon-favorite.png" width="30" height="29" alt="Добавить в избранное">
+                В избранное
+              </button>
+            </div>
+          </li>
+          <li class="product-card__item">
+            <div class="product-card__mark">Mark</div>
+            <div class="product-card__name">Антифриз Fosser Antifreeze </div>
+            <div class="product-card__promo">FA 12 Readymix 1 л Concentrat, Germany</div>
+            <div class="product-card__feedback-wrap">
+              <div class="product-card__feedback">
+                <div class="product-card__stars">
+                  <div class="product-card__gray"></div>
+                  <div class="product-card__gold" style="width: 0%;"></div>
+                </div>
+                <a class="product-card__feedback-link" href="#"> Отзывы (<span>10</span>)</a>
+              </div>
+              <div class="product-card__stock">В наличии: <span>24 шт.</span></div>
+            </div>
+            <div class="product-card__picture-wrap">
+              <ul class="product-card__options">
+                <li class="product-card__options-item">
+                  <img src="img/content/sun.png" width="38" height="38" alt="Летняя разина">
+                  Летняя
+                </li>
+                <li class="product-card__options-item">
+                  <img src="img/content/passenger-car.png" width="53" height="26" alt="Легковая">
+                  Легковая
+                </li>
+                <li class="product-card__options-item">
+                  <img src="img/content/new.png" width="48" height="25" alt="Новая">
+                  Новая
+                </li>
+              </ul>
+              <div class="product-card__img-wrap">
+                <img src="img/content/product3.png" width="187" height="187" alt="Антифриз Fosser Antifreeze">
+              </div>
+            </div>
+            <ul class="product-card__flag-wrap">
+              <li class="product-card__flag product-card__flag--new">
+                <span>Новинка</span>
+              </li>
+            </ul>
+            <div class="product-card__price-wrap">
+              <div class="product-card__new-price">9 570<span>грн.</span></div>
+              <div class="product-card__old-price">11 250 грн.</div>
+            </div>
+            <button class="btn btn--gradient product-card__btn" type="button">
+              <img src="img/content/icon-basket.png" width="28" height="24" alt="Корзина">
+              купить товар
+            </button>
+            <div class="product-card__action-wrap">
+              <button class="product-card__action-btn" type="button">
+                <img src="img/content/icon-compare.png" width="34" height="26" alt="Добавить к сравнению">
+                Сравнить товар
+              </button>
+              <button class="product-card__action-btn" type="button">
+                <img src="img/content/icon-favorite.png" width="30" height="29" alt="Добавить в избранное">
+                В избранное
+              </button>
+            </div>
+          </li>
+          <li class="product-card__item">
+            <div class="product-card__mark">Mark</div>
+            <div class="product-card__name">Антифриз Fosser Antifreeze </div>
+            <div class="product-card__promo"> </div>
+            <div class="product-card__feedback-wrap">
+              <div class="product-card__feedback">
+                <div class="product-card__stars">
+                  <div class="product-card__gray"></div>
+                  <div class="product-card__gold" style="width: 100%;"></div>
+                </div>
+                <a class="product-card__feedback-link" href="#"> Отзывы (<span>10</span>)</a>
+              </div>
+              <div class="product-card__stock">В наличии: <span>24 шт.</span></div>
+            </div>
+            <div class="product-card__picture-wrap">
+              <ul class="product-card__options">
+                <li class="product-card__options-item">
+                  <img src="img/content/sun.png" width="38" height="38" alt="Летняя разина">
+                  Летняя
+                </li>
+                <li class="product-card__options-item">
+                  <img src="img/content/passenger-car.png" width="53" height="26" alt="Легковая">
+                  Легковая
+                </li>
+                <li class="product-card__options-item">
+                  <img src="img/content/new.png" width="48" height="25" alt="Новая">
+                  Новая
+                </li>
+              </ul>
+              <div class="product-card__img-wrap">
+                <img src="img/content/product1.png" width="157" height="205" alt="Антифриз Fosser Antifreeze">
+              </div>
+            </div>
+            <ul class="product-card__flag-wrap">
+            </ul>
+            <div class="product-card__price-wrap">
+              <div class="product-card__new-price">599 <span>грн.</span></div>
+              <div class="product-card__old-price"></div>
+            </div>
+            <button class="btn btn--gradient product-card__btn" type="button">
+              <img src="img/content/icon-basket.png" width="28" height="24" alt="Корзина">
+              купить товар
+            </button>
+            <div class="product-card__action-wrap">
+              <button class="product-card__action-btn" type="button">
+                <img src="img/content/icon-compare.png" width="34" height="26" alt="Добавить к сравнению">
+                Сравнить товар
+              </button>
+              <button class="product-card__action-btn" type="button">
+                <img src="img/content/icon-favorite.png" width="30" height="29" alt="Добавить в избранное">
+                В избранное
+              </button>
+            </div>
+          </li>
+        </ul>
+      </section>
     </main>
     <footer class="footer"></footer>
     <div class="modal modal--preload modal--callback    ">
@@ -395,7 +649,7 @@
         <div class="modal__overlay"></div>
         <div class="modal__content">
           <div class="callback">
-            <form action="" method="POST">
+            <form action="/" method="POST">
               <h2 class="callback__title">Перезвоните мне</h2>
               <div class="custom-input  callback__input">
                 <label class="callback__label" for="user-phone">Номер телефона</label>
